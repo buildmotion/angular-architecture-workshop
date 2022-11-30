@@ -245,7 +245,7 @@
   resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-14.2.12.tgz#d17b18f0f7cab815bd0cdeb8b9c04989d6a4512b"
   integrity sha512-YmW6simyEVmpDmbYVUhZ2IxSP6pmsWrV120rB9Y21/BeM39WIXA4NCNirVWlAd/KAKY9O7Sbn1nXI6rSDfhopQ==
 
-"@angular/platform-browser-dynamic@~14.2.0":
+"@angular/platform-browser-dynamic@~14.2j.0":
   version "14.2.12"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-14.2.12.tgz#d4dac4a488c804ea07213a98450efa124a15d70a"
   integrity sha512-oZhNJeaBmgw8+KBSYpKz2RYqEDyETC+HJXH8dwIFcP6BqqwL2NE70FdSR7EnOa5c41MEtTmMCGhrJSFR60x5/w==
@@ -1331,6 +1331,82 @@
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
+
+"@buildmotion/actions@14.3.1":
+  version "14.3.1"
+  resolved "https://registry.yarnpkg.com/@buildmotion/actions/-/actions-14.3.1.tgz#eeedcc1a470a253c1cea012293a951697eeaed81"
+  integrity sha512-4EAwKkLEFTIUxSaXJ6yKu/s7aCeEjkwrrtV1WbIUB/ncv12expPpknJvTEDw8voqnZMJeOycrkDSnXPuFk2rlg==
+
+"@buildmotion/angular@13.0.1":
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/@buildmotion/angular/-/angular-13.0.1.tgz#c8cbb0578cfc8c2274d74765ddd56350426ed5e7"
+  integrity sha512-9OOhb66tpWRVFT1U+M/q5jzEI96u1AlbHRNuPYP84SdHYO21AxwWC0bfiV/2M/+vh/+bdDEVuoyKZa7r1Y3VzQ==
+
+"@buildmotion/common@14.3.1":
+  version "14.3.1"
+  resolved "https://registry.yarnpkg.com/@buildmotion/common/-/common-14.3.1.tgz#4cf49332e9d630ede0316b04782c52a62ba4d1c1"
+  integrity sha512-m2CzNTt4MI/yWeYP9ol8FuNWDCYXqcdpx4ipidqrr1oMt+rhINP31NUH7l+pLsIo+IiUd+xqecz5uEdATspMRA==
+  dependencies:
+    tslib "^2.3.0"
+
+"@buildmotion/configuration@14.3.1":
+  version "14.3.1"
+  resolved "https://registry.yarnpkg.com/@buildmotion/configuration/-/configuration-14.3.1.tgz#1d3873135723fbdc1d80d2d68e1cf7b7d0b349af"
+  integrity sha512-So90jlCQO3GzfAdry2NZVw/rOVSOj28DTTlERq+WVnUGDyqvaMRkqaEdpC+pE2X/z23PGHYEgiwnLeiU8ONpew==
+  dependencies:
+    tslib "^2.3.0"
+
+"@buildmotion/core@14.3.1":
+  version "14.3.1"
+  resolved "https://registry.yarnpkg.com/@buildmotion/core/-/core-14.3.1.tgz#f97fff2a2f354e057fe0205391784a3b2ff5fb71"
+  integrity sha512-tB8/EwTUy1TYJOiYHEFxf2IHBUMRDX6l86QRQiqDB1GYNhONq780VmOjIp6ilwlS/NkX9C8YjpcvX8/6UhyTow==
+
+"@buildmotion/error-handling@14.3.1":
+  version "14.3.1"
+  resolved "https://registry.yarnpkg.com/@buildmotion/error-handling/-/error-handling-14.3.1.tgz#96191cfda4656e52b00d803b90d912e7c8d93337"
+  integrity sha512-YNJd2sesWfRiH9jVyIJ1bP0ODMt42soWpk9dQmMvP7Q3A8FBcNeA1Kq2xW8sR8JXz20LNkugR2nyx12jTi2gCw==
+  dependencies:
+    tslib "~2.3.0"
+
+"@buildmotion/foundation@14.3.1":
+  version "14.3.1"
+  resolved "https://registry.yarnpkg.com/@buildmotion/foundation/-/foundation-14.3.1.tgz#faf21ec59e2237d6215ce2b77564e33ae3fe9dee"
+  integrity sha512-cWweTq17WNDaWPWG5zf0SgXvVl2xL6T8eWC9wM01qD1oiuPjrSfKsoy7WuxTeId5pQZ1wh8n/FUvu5peWcesTw==
+  dependencies:
+    tslib "^2.3.0"
+
+"@buildmotion/http-service@14.3.1":
+  version "14.3.1"
+  resolved "https://registry.yarnpkg.com/@buildmotion/http-service/-/http-service-14.3.1.tgz#7cb045183b5b0159a1f556713beb07b1a8ce0869"
+  integrity sha512-I0Y2ZE16VMd5X4z0MoSgTusGPrqqE7i150MaTXOeIdlxbjg3MSGg2lkKPiYBn4H/pPeLojZQBY64ZurfxvuMxQ==
+  dependencies:
+    tslib "^2.3.0"
+
+"@buildmotion/logging@14.3.1":
+  version "14.3.1"
+  resolved "https://registry.yarnpkg.com/@buildmotion/logging/-/logging-14.3.1.tgz#660ed9b48c41f28790698519fee6def7f9fb5f00"
+  integrity sha512-2RWKVaPMDEBRhmsBkRP9DmyF2iUrRZaHgBnK3tKA2C/OxzTvSdLzGa1z8/B8pH7QTHU3Iu2fxibIqyzB10hRbA==
+  dependencies:
+    tslib "^2.3.0"
+
+"@buildmotion/notifications@14.3.1":
+  version "14.3.1"
+  resolved "https://registry.yarnpkg.com/@buildmotion/notifications/-/notifications-14.3.1.tgz#a042e8b3f903e179781c17545752fd7205b0c4f2"
+  integrity sha512-bbkEA6O0/cK4HNJ0n3SVfDTlxojRBgcIfaBtEgn5t8qG4261b8bHASB0j6P59/Z4rtTAm9NTw1bBAjhXePvKhQ==
+  dependencies:
+    tslib "^2.3.0"
+
+"@buildmotion/rules-engine@14.3.1":
+  version "14.3.1"
+  resolved "https://registry.yarnpkg.com/@buildmotion/rules-engine/-/rules-engine-14.3.1.tgz#a81db1055afb4a35a3ea67fae06acbfae4386502"
+  integrity sha512-SC0WkZRJm8xRP2ogUdV6sJM2QNOHwgtBRhiy9L4uJHle6A5b8zU6ydE1J56zFIFoHmsCDQbqqByZIhfcSVqusA==
+
+"@buildmotion/validation@14.3.1":
+  version "14.3.1"
+  resolved "https://registry.yarnpkg.com/@buildmotion/validation/-/validation-14.3.1.tgz#de53a14cc9c2afce7e499a19b7a16df2bc1634c1"
+  integrity sha512-CgD9Rmf5H53dLDdA9mRTvoSg+jDI5aW/dlpQMnQ0fcLlTei4fv8ljpcb6TPo+6TBsAlaeGEe9XOPSWVTeh0JiQ==
+  dependencies:
+    tslib "^2.3.0"
 
 "@colors/colors@1.5.0":
   version "1.5.0"
@@ -9685,6 +9761,11 @@ tslib@^2.1.0, tslib@^2.3.0, tslib@^2.4.0:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.1.tgz#0d0bfbaac2880b91e22df0768e55be9753a5b17e"
   integrity sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==
+
+tslib@~2.3.0:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
+  integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
 
 tsutils@^3.21.0:
   version "3.21.0"
