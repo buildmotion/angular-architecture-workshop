@@ -1,0 +1,27 @@
+{
+  "name": "dashboard-legal",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/dashboard/legal/src",
+  "prefix": "buildmotion",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/dashboard/legal"],
+      "options": {
+        "jestConfig": "libs/dashboard/legal/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/dashboard/legal/**/*.ts",
+          "libs/dashboard/legal/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
