@@ -1,6 +1,6 @@
 {
   "name": "angular-architecture-workshop",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
@@ -10,10 +10,11 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "nx": "14.8.6",
+    "@nrwl/angular": "14.8.6",
     "@nrwl/cli": "14.8.6",
     "@nrwl/workspace": "14.8.6",
-    "typescript": "~4.8.2",
-    "prettier": "^2.6.2"
+    "nx": "14.8.6",
+    "prettier": "^2.6.2",
+    "typescript": "~4.8.2"
   }
 }
