@@ -3,7 +3,7 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import PerfectScrollbar from 'perfect-scrollbar';
 import { Subscription } from 'rxjs';
-import { navigation } from '@bv-bim/dashboard-types';
+import { navigation } from '@buildmotion/dashboard-types';
 import { NavbarComponent } from '../navbar/navbar.component';
 
 declare const $: any;

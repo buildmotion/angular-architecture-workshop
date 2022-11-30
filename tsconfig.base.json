@@ -19,7 +19,7 @@
       "@buildmotion/components": ["libs/dashboard/components/src/index.ts"],
       "@buildmotion/layouts": ["libs/dashboard/layouts/src/index.ts"],
       "@buildmotion/legal": ["libs/dashboard/legal/src/index.ts"],
-      "@buildmotion/types": ["libs/dashboard/types/src/index.ts"]
+      "@buildmotion/dashboard-types": ["libs/dashboard/types/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

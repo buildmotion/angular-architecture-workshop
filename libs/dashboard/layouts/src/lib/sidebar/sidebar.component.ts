@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import PerfectScrollbar from 'perfect-scrollbar';
 
-import { routeInfo } from '@bv-bim/dashboard-types';
+import { routeInfo } from '@buildmotion/dashboard-types';
 
 declare const $: any;
 
