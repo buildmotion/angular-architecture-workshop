@@ -1,0 +1,18 @@
+<div class="wrapper">
+    <div class="sidebar" data-color="white" data-background-color="red" data-image="./assets/img/sidebar-1.jpg">
+        <bv-bim-sidebar-cmp>
+        </bv-bim-sidebar-cmp>
+        <div class="sidebar-background" style="background-image: url(assets/img/sidebar-1.jpg)"></div>
+    </div>
+    <div class="main-panel">
+        <bv-bim-navbar-cmp>
+        </bv-bim-navbar-cmp>
+        <router-outlet></router-outlet>
+        <div *ngIf="!isMap()">
+            <bv-bim-footer-cmp>
+            </bv-bim-footer-cmp>
+        </div>
+    </div>
+    <bv-bim-fixedplugin>
+    </bv-bim-fixedplugin>
+</div>
