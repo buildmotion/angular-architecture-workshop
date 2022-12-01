@@ -18,6 +18,12 @@ export const ROUTES: routeInfo.RouteInfo[] = [
         type: 'link',
         icontype: 'dashboard',
     },
+    {
+        path: '/accounts',
+        title: 'Accounts',
+        type: 'link',
+        icontype: 'person',
+    },
 ];
 @Component({
     selector: 'bv-bim-sidebar-cmp',

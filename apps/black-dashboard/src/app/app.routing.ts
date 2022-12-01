@@ -23,6 +23,10 @@ export const AppRoutes: Routes = [
                 loadChildren: () =>
                     import('./userpage/user.module').then((m) => m.UserModule),
             },
+            {
+                path: 'accounts',
+                loadChildren: () => import('@buildmotion/dashboard-accounts-ui').then((m) => m.UiModule)
+            }
 
         ],
     },
