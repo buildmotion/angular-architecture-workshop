@@ -7,6 +7,11 @@ import { RouterModule } from '@angular/router';
     CommonModule,
 
     RouterModule.forChild([
+      {
+        path: 'home',
+        loadChildren: () =>
+          import('./home/home.module').then((m) => m.HomeModule),
+      },
       /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
     ]),
   ],
