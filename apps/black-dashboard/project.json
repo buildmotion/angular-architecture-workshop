@@ -7,7 +7,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/black-dashboard",
         "index": "apps/black-dashboard/src/index.html",
@@ -115,7 +117,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/black-dashboard"],
+      "outputs": [
+        "coverage/apps/black-dashboard"
+      ],
       "options": {
         "jestConfig": "apps/black-dashboard/jest.config.ts",
         "passWithNoTests": true
