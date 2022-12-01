@@ -1,11 +1,14 @@
 {
+  "name": "dashboard-legal",
   "projectType": "library",
   "sourceRoot": "libs/dashboard/legal/src",
   "prefix": "bv-bim",
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/dashboard/legal"],
+      "outputs": [
+        "coverage/libs/dashboard/legal"
+      ],
       "options": {
         "jestConfig": "libs/dashboard/legal/jest.config.ts",
         "passWithNoTests": true

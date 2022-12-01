@@ -7,7 +7,9 @@
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/dashboard/layouts"],
+      "outputs": [
+        "coverage/libs/dashboard/layouts"
+      ],
       "options": {
         "jestConfig": "libs/dashboard/layouts/jest.config.ts",
         "passWithNoTests": true

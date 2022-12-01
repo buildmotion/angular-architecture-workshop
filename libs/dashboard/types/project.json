@@ -1,11 +1,14 @@
 {
+  "name": "dashboard-types",
   "projectType": "library",
   "sourceRoot": "libs/dashboard/types/src",
   "prefix": "bv-bim",
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/dashboard/types"],
+      "outputs": [
+        "coverage/libs/dashboard/types"
+      ],
       "options": {
         "jestConfig": "libs/dashboard/types/jest.config.ts",
         "passWithNoTests": true
