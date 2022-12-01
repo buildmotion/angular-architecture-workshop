@@ -1,4 +1,5 @@
 {
+  "name": "dashboard-legal",
   "projectType": "library",
   "sourceRoot": "libs/dashboard/legal/src",
   "prefix": "bv-bim",

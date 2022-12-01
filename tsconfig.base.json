@@ -17,9 +17,12 @@
     "paths": {
       "@buildmotion/assets": ["libs/dashboard/assets/src/index.ts"],
       "@buildmotion/components": ["libs/dashboard/components/src/index.ts"],
+      "@buildmotion/dashboard-accounts-ui": [
+        "libs/dashboard/accounts/ui/src/index.ts"
+      ],
+      "@buildmotion/dashboard-types": ["libs/dashboard/types/src/index.ts"],
       "@buildmotion/layouts": ["libs/dashboard/layouts/src/index.ts"],
-      "@buildmotion/legal": ["libs/dashboard/legal/src/index.ts"],
-      "@buildmotion/dashboard-types": ["libs/dashboard/types/src/index.ts"]
+      "@buildmotion/legal": ["libs/dashboard/legal/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

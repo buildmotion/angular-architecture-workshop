@@ -1,4 +1,5 @@
 {
+  "name": "dashboard-types",
   "projectType": "library",
   "sourceRoot": "libs/dashboard/types/src",
   "prefix": "bv-bim",
