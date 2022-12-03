@@ -12,6 +12,13 @@ import { RouterModule } from '@angular/router';
         loadChildren: () =>
           import('./home/home.module').then((m) => m.HomeModule),
       },
+      {
+        path: 'new-account',
+        loadChildren: () =>
+          import('./new-account/new-account.module').then(
+            (m) => m.NewAccountModule
+          ),
+      },
       /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
     ]),
   ],
