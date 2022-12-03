@@ -52,8 +52,6 @@
               <label class="error" *ngIf="!form.valid && passwordConfirm.touched && passwordConfirm.hasError('passwordMismatch')">This passwords do not match.</label>
             </div>
             <div class="category form-category">* Required fields</div>
-          </div>
-          <div class="card-footer text-right">
             <div class="form-check pull-left">
               <label class="form-check-label">
                 <input class="form-check-input" formControlName="acceptTermsConditions" name="optionCheckboxes" type="checkbox" />
@@ -61,6 +59,8 @@
               </label>
               <label class="error" *ngIf="acceptTermsConditions.touched && acceptTermsConditions.hasError('required')">You must accept the terms and conditions.</label>
             </div>
+          </div>
+          <div class="card-footer text-right">
             <button class="btn btn-danger" type="submit">Register</button>
           </div>
         </div>
