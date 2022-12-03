@@ -17,6 +17,9 @@
     "paths": {
       "@buildmotion/assets": ["libs/dashboard/assets/src/index.ts"],
       "@buildmotion/components": ["libs/dashboard/components/src/index.ts"],
+      "@buildmotion/dashboard-accounts-service": [
+        "libs/dashboard/accounts/service/src/index.ts"
+      ],
       "@buildmotion/dashboard-accounts-ui": [
         "libs/dashboard/accounts/ui/src/index.ts"
       ],
