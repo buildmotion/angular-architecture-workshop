@@ -7,13 +7,13 @@ import { RouterModule } from '@angular/router';
     CommonModule,
 
     RouterModule.forChild([
+      // {
+      //   path: '',
+      //   loadChildren: () =>
+      //     import('./home/home.module').then((m) => m.HomeModule),
+      // },
       {
         path: '',
-        loadChildren: () =>
-          import('./home/home.module').then((m) => m.HomeModule),
-      },
-      {
-        path: 'new-account',
         loadChildren: () =>
           import('./new-account/new-account.module').then(
             (m) => m.NewAccountModule
