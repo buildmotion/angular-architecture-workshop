@@ -50,6 +50,14 @@ export class NewAccountComponent extends ComponentBase implements OnInit {
     });
   }
 
+  onSubmit() {
+    this.loggingService.log(this.componentName, Severity.Information, `Preparing to submit/process account information.`);
+  }
+
+  get acceptTermsConditions(): AbstractControl | null {
+    return this.form.get('acceptTermsConditions');
+  }
+
   get emailAddress(): AbstractControl {
     return this.form.get('emailAddress') as FormControl;
   }
