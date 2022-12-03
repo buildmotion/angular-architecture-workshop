@@ -3,6 +3,7 @@ import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from
 import { Router } from '@angular/router';
 import { ComponentBase } from '@buildmotion/foundation';
 import { LoggingService, Severity } from '@buildmotion/logging';
+import { NewAccountUiService } from './new-account-ui.service';
 
 @Component({
   selector: 'buildmotion-new-account',
@@ -18,6 +19,7 @@ export class NewAccountComponent extends ComponentBase implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
+    private uiService: NewAccountUiService,
     loggingService: LoggingService,
     router: Router
   ) {
