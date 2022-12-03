@@ -1,9 +1,10 @@
 import { TestBed } from '@angular/core/testing';
+import { LoggingService, LoggingServiceMock } from '@buildmotion/logging';
+import { AccountsService } from './accounts-service.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-import { ServiceService } from './service.service';
-
-describe('ServiceService', () => {
-  let service: ServiceService;
+describe('AccountsService', () => {
+  let service: AccountsService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -15,7 +16,7 @@ describe('ServiceService', () => {
         },
       ],
     });
-    service = TestBed.inject(ServiceService);
+    service = TestBed.inject(AccountsService);
   });
 
   it('should be created', () => {
