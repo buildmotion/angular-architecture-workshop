@@ -6,14 +6,14 @@ import { BusinessProviderService } from './business/business-provider.service';
 @Injectable({
   providedIn: 'root',
 })
-export class ServiceService extends ServiceBase {
+export class AccountsService extends ServiceBase {
   constructor(
     @Inject(BusinessProviderService)
     private businessProvider: BusinessProviderService,
     loggingService: LoggingService,
     serviceContext: ServiceContext
   ) {
-    super('ServiceService', loggingService, serviceContext);
+    super('AccountsService', loggingService, serviceContext);
     this.businessProvider.serviceContext = this.serviceContext;
   }
 }
