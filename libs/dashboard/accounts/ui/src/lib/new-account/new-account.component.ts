@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ComponentBase } from '@buildmotion/foundation';
 import { LoggingService, Severity } from '@buildmotion/logging';
 import { NewAccountUiService } from './new-account-ui.service';
+import { accountInfo } from '@buildmotion/dashboard-types';
 
 @Component({
   selector: 'buildmotion-new-account',
@@ -46,14 +47,20 @@ export class NewAccountComponent extends ComponentBase implements OnInit {
         asyncValidators: [],
       }),
       passwordConfirm: new FormControl(undefined, {
-        validators: { ...this.passwordValidators },
+        validators: [...this.passwordValidators],
         updateOn: 'change',
       }),
+      acceptTermsConditions: new FormControl(false, {
+        validators: [Validators.required]
+      })
     });
   }
 
   onSubmit() {
     this.loggingService.log(this.componentName, Severity.Information, `Preparing to submit/process account information.`);
+
+    const newAccount: accountInfo.NewAccount = { ...this.form.value };
+    this.uiService.createAccount(newAccount);
   }
 
   get acceptTermsConditions(): AbstractControl | null {
