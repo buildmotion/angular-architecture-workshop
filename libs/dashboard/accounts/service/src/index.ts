@@ -1,1 +1,2 @@
-const variable = 'dashboard-accounts-service';
+
+export { AccountsService } from './lib/accounts-service.service';
