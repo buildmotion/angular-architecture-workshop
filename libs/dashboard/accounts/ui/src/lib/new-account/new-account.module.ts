@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { NewAccountComponent } from './new-account.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NewAccountUiService } from './new-account-ui.service';
 
 const routes: Routes = [{ path: '', component: NewAccountComponent }];
 
@@ -10,5 +11,6 @@ const routes: Routes = [{ path: '', component: NewAccountComponent }];
   declarations: [NewAccountComponent],
   imports: [CommonModule, RouterModule.forChild(routes), FormsModule,
     ReactiveFormsModule,],
+  providers: [NewAccountUiService]
 })
 export class NewAccountModule {}
