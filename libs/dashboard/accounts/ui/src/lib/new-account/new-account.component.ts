@@ -57,10 +57,13 @@ export class NewAccountComponent extends ComponentBase implements OnInit {
   }
 
   onSubmit() {
-    this.loggingService.log(this.componentName, Severity.Information, `Preparing to submit/process account information.`);
-
-    const newAccount: accountInfo.NewAccount = { ...this.form.value };
-    this.uiService.createAccount(newAccount);
+    if (this.form.valid) {
+      this.loggingService.log(this.componentName, Severity.Information, `Preparing to submit/process account information.`);
+      const newAccount: accountInfo.NewAccount = { ...this.form.value };
+      this.uiService.createAccount(newAccount);
+    } else {
+      this.loggingService.log(this.componentName, Severity.Information, `Attempting to submit invalid form to create new account.`);
+    }
   }
 
   get acceptTermsConditions(): AbstractControl | null {

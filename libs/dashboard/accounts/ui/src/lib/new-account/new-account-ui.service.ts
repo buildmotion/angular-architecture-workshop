@@ -42,6 +42,7 @@ export class NewAccountUiService extends ServiceBase {
     // TODO: HANDLE ANY [error] MESSAGES, NOTIFICATIONS, UI/UX CHANGES;
     this.loggingService.log(this.serviceName, Severity.Error, error.message);
   }
+
   private finishCreateAccount(): void {
     // TODO: HANDLE ANY [finish] MESSAGES, NOTIFICATIONS, UI/UX CHANGES;
   }
