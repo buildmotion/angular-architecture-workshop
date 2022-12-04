@@ -1,23 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { APP_INITIALIZER, ModuleWithProviders, NgModule } from '@angular/core';
-import { ConfigurationContext, ConfigurationService } from '@buildmotion/configuration';
+import { ConfigurationContext, ConfigurationModule, ConfigurationService } from '@buildmotion/configuration';
 import { ErrorHandlingModule } from '@buildmotion/error-handling';
-import { HttpErrorInterceptor } from '@buildmotion/http-service';
+import { HttpErrorInterceptor, HttpServiceModule, IHttpOptions } from '@buildmotion/http-service';
 import { ConsoleWriter, DataDogWriterService, LoggingModule, LoggingService } from '@buildmotion/logging';
-import { configInfo } from '@buildmotion/dashboard-types';
 import { AppConfig } from './../../config/app-config';
-
-/**
- * The factory function to initialize the configuration service for the application.
- * @param configService
- */
-export function initializeConfiguration<T>(configContext: ConfigurationContext<T>, configService: ConfigurationService<T>) {
-  return () => {
-    configService.settings = configContext.config;
-    return configService;
-  };
-}
 
 /**
  * The factory function to initialize the logging service and writer for the
@@ -45,28 +33,32 @@ const errorHandlingOptions = {
   includeDefaultErrorHandling: AppConfig.errorHandlingConfig.includeDefaultErrorHandling
 }
 
+const httpOptions: IHttpOptions = {
+  apiURL: AppConfig.apiConfig.apiURL,
+  baseUrl: AppConfig.apiConfig.baseUrl,
+  csrf: AppConfig.apiConfig.csrf,
+  health: AppConfig.apiConfig.health,
+  version: AppConfig.apiConfig.version
+}
+
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
+    ConfigurationModule.forRoot({ config: AppConfig }),
     ErrorHandlingModule.forRoot(errorHandlingOptions),
     LoggingModule.forRoot(AppConfig.dataDogConfig, AppConfig.loggingConfig),
+    HttpServiceModule.forRoot(httpOptions)
   ]
 })
-export class CrossCuttingModule<T extends configInfo.IConfiguration> {
-  public static forRoot(): ModuleWithProviders<CrossCuttingModule<any>> {
+export class CrossCuttingModule {
+  public static forRoot(): ModuleWithProviders<CrossCuttingModule> {
     return {
       ngModule: CrossCuttingModule,
       providers: [
         LoggingService,
         ConsoleWriter,
         DataDogWriterService,
-        {
-          provide: APP_INITIALIZER,
-          useFactory: initializeConfiguration<configInfo.IConfiguration>,
-          deps: [ConfigurationContext, ConfigurationService],
-          multi: true,
-        },
         {
           provide: APP_INITIALIZER,
           useFactory: initializeLogWriter,
