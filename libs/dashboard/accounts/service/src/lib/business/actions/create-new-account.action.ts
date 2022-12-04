@@ -1,7 +1,7 @@
 import { ApiResponse } from '@buildmotion/core';
 import { accountInfo } from '@buildmotion/dashboard-types';
 import { Severity } from '@buildmotion/logging';
-import { IsNotNullOrUndefined } from '@buildmotion/rules-engine';
+import { IsNotNullOrUndefined, IsTrue } from '@buildmotion/rules-engine';
 import { Guid } from 'guid-typescript';
 import { of } from 'rxjs';
 import { BusinessActionBase } from './business-action-base';
@@ -27,9 +27,23 @@ export class CreateNewAccountAction<T> extends BusinessActionBase<T> {
         '[newAccount]IsNotNullOrUndefined',
         'The [newAccount] object cannot be null or undefined.',
         this.newAccount,
-        this.hideRuleMessages
+        this.showRuleMessages
       )
     );
+
+    if (this.newAccount) {
+      // FIXME: ADD MORE RULES FOR VALIDATION
+
+      // ACCEPT TERMS
+      this.validationContext.addRule(
+        new IsTrue(
+          'AcceptTermsConditions',
+          'Terms and conditions must be accepted.',
+          this.newAccount.acceptTermsConditions,
+          this.showRuleMessages
+        )
+      );
+    }
   }
 
   /**
