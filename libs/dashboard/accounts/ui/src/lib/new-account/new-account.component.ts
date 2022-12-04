@@ -57,6 +57,7 @@ export class NewAccountComponent extends ComponentBase implements OnInit {
   }
 
   onSubmit() {
+    this.markFormAsTouched(this.form);
     if (this.form.valid) {
       this.loggingService.log(this.componentName, Severity.Information, `Preparing to submit/process account information.`);
       const newAccount: accountInfo.NewAccount = { ...this.form.value };
