@@ -21,8 +21,7 @@ export class AccountsService extends ServiceBase {
     this.businessProvider.serviceContext = this.serviceContext;
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   createAccount<T>(newAccount: accountInfo.NewAccount): Observable<ApiResponse<T>> {
-    throw new Error('Method not implemented.');
+    return this.businessProvider.createAccount<T>(newAccount);
   }
 }
