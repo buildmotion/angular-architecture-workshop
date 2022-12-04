@@ -9,6 +9,4 @@ git switch accounts/new-account-ui-service
 git switch accounts/new-domain-service-library
 git switch accounts/domain-service-integration
 
-nx generate @buildmotion/angular:business-action createNewAccount --directory=dashboard/accounts/service --npm-scope=buildmotion --no-interactive --dry-run
-
 git switch main
