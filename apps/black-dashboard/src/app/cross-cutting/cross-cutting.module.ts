@@ -5,7 +5,8 @@ import { ConfigurationContext, ConfigurationService } from '@buildmotion/configu
 import { ErrorHandlingModule } from '@buildmotion/error-handling';
 import { HttpErrorInterceptor } from '@buildmotion/http-service';
 import { ConsoleWriter, DataDogWriterService, LoggingModule, LoggingService } from '@buildmotion/logging';
-import { AppConfig, IConfiguration } from './../../config/app-config';
+import { configInfo } from '@buildmotion/dashboard-types';
+import { AppConfig } from './../../config/app-config';
 
 /**
  * The factory function to initialize the configuration service for the application.
@@ -52,7 +53,7 @@ const errorHandlingOptions = {
     LoggingModule.forRoot(AppConfig.dataDogConfig, AppConfig.loggingConfig),
   ]
 })
-export class CrossCuttingModule<T extends IConfiguration> {
+export class CrossCuttingModule<T extends configInfo.IConfiguration> {
   public static forRoot(): ModuleWithProviders<CrossCuttingModule<any>> {
     return {
       ngModule: CrossCuttingModule,
@@ -60,6 +61,12 @@ export class CrossCuttingModule<T extends IConfiguration> {
         LoggingService,
         ConsoleWriter,
         DataDogWriterService,
+        {
+          provide: APP_INITIALIZER,
+          useFactory: initializeConfiguration<configInfo.IConfiguration>,
+          deps: [ConfigurationContext, ConfigurationService],
+          multi: true,
+        },
         {
           provide: APP_INITIALIZER,
           useFactory: initializeLogWriter,
@@ -73,7 +80,7 @@ export class CrossCuttingModule<T extends IConfiguration> {
           provide: ConfigurationContext,
           useValue: { config: AppConfig },
         },
-        ConfigurationService,
+        ConfigurationService<typeof AppConfig>,
         ...INTERCEPTORS
       ]
     }
