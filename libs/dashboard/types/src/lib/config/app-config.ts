@@ -1,6 +1,18 @@
-import { configInfo } from "@buildmotion/dashboard-types";
+import { ErrorHandlingOptions } from "@buildmotion/error-handling";
+import { DataDogOptions, LoggingConfig } from "@buildmotion/logging";
+import { IAPIConfig } from "./i-api-config";
+import { IWebConfig } from "./i-web-config";
 
-export const AppConfig: configInfo.IConfiguration = {
+
+export interface IConfiguration {
+    apiConfig: IAPIConfig,
+    dataDogConfig: DataDogOptions,
+    errorHandlingConfig: ErrorHandlingOptions,
+    loggingConfig: LoggingConfig,
+    webConfig: IWebConfig
+}
+
+export const AppConfig: IConfiguration = {
     apiConfig: {
         apiURL: 'https://api-dev.dashboard/api',
         baseUrl: '',

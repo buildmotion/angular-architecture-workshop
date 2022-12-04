@@ -1,0 +1,27 @@
+{
+  "name": "dashboard-accounts-service",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/dashboard/accounts/service/src",
+  "prefix": "buildmotion",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/dashboard/accounts/service"],
+      "options": {
+        "jestConfig": "libs/dashboard/accounts/service/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/dashboard/accounts/service/**/*.ts",
+          "libs/dashboard/accounts/service/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
