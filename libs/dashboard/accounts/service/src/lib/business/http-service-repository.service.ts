@@ -4,7 +4,7 @@ import { HttpService } from '@buildmotion/http-service';
 import { LoggingService } from '@buildmotion/logging';
 import { Injectable } from '@angular/core';
 import { IHttpServiceRepositoryService } from './i-http-service-repository.service';
-
+import { configInfo } from '@buildmotion/dashboard-types';
 @Injectable({
   providedIn: 'root',
 })
@@ -14,7 +14,7 @@ export class HttpServiceRepositoryService
 {
   constructor(
     private httpService: HttpService,
-    private configService: ConfigurationService,
+    private configService: ConfigurationService<configInfo.IConfiguration>,
     loggingService: LoggingService,
     serviceContext: ServiceContext
   ) {
