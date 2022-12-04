@@ -3,8 +3,9 @@ import { Inject, Injectable } from '@angular/core';
 import { ConfigurationService } from '@buildmotion/configuration';
 import { ServiceBase, ServiceContext } from '@buildmotion/foundation';
 import { LoggingService } from '@buildmotion/logging';
-import { HttpSecurityRepositoryService } from './http-security-repository.service';
+import { HttpServiceRepositoryService } from './http-service-repository.service';
 import { IBusinessProviderService } from './i-business-provider.service';
+import { configInfo } from '@buildmotion/dashboard-types'
 
 @Injectable({
   providedIn: 'root',
@@ -16,7 +17,7 @@ export class BusinessProviderService
   constructor(
     @Inject(HttpServiceRepositoryService)
     public apiService: HttpServiceRepositoryService,
-    public configService: ConfigurationService,
+    public configService: ConfigurationService<configInfo.IConfiguration>,
     loggingService: LoggingService,
     serviceContext: ServiceContext
   ) {
