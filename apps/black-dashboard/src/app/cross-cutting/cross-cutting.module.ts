@@ -6,6 +6,7 @@ import { ErrorHandlingModule } from '@buildmotion/error-handling';
 import { HttpErrorInterceptor, HttpServiceModule, IHttpOptions } from '@buildmotion/http-service';
 import { ConsoleWriter, DataDogWriterService, LoggingModule, LoggingService } from '@buildmotion/logging';
 import { AppConfig } from './../../config/app-config';
+import { NotificationService } from '@buildmotion/notifications';
 
 /**
  * The factory function to initialize the logging service and writer for the
@@ -73,6 +74,7 @@ export class CrossCuttingModule {
           useValue: { config: AppConfig },
         },
         ConfigurationService<typeof AppConfig>,
+        NotificationService,
         ...INTERCEPTORS
       ]
     }

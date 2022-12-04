@@ -1,0 +1,4 @@
+<h3 *ngIf="title$ | async as title">{{title}}</h3>
+<ul *ngFor="let message of messages$ | async">
+    <li>{{message}}</li>
+</ul>
