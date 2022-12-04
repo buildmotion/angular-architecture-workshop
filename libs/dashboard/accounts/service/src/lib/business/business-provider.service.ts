@@ -6,6 +6,10 @@ import { LoggingService } from '@buildmotion/logging';
 import { HttpServiceRepositoryService } from './http-service-repository.service';
 import { IBusinessProviderService } from './i-business-provider.service';
 import { configInfo } from '@buildmotion/dashboard-types'
+import { accountInfo } from '@buildmotion/dashboard-types';
+import { ApiResponse } from '@buildmotion/core';
+import { CreateNewAccountAction } from './actions/create-new-account.action';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -14,6 +18,7 @@ export class BusinessProviderService
   extends ServiceBase
   implements IBusinessProviderService
 {
+
   constructor(
     @Inject(HttpServiceRepositoryService)
     public apiService: HttpServiceRepositoryService,
@@ -24,9 +29,9 @@ export class BusinessProviderService
     super('BusinessProviderService', loggingService, serviceContext);
   }
 
-  // someMethod<T>(someInput: string): Observable<ApiResponse<T>> {
-  //   const action = new SomeAction<T>(someInput);
-  //   action.Do(this);
-  //   return action.response;
-  // }
+  createAccount<T>(newAccount: accountInfo.NewAccount): Observable<ApiResponse<T>> {
+    const action = new CreateNewAccountAction<T>(newAccount);
+    action.Do({ ...this });
+    return action.response;
+  }
 }

@@ -1,4 +1,4 @@
-import { ActionBase } from 'buildmotion/foundation';
+import { ActionBase } from '@buildmotion/foundation';
 import { BusinessProviderService } from './../business-provider.service';
 
 /**
