@@ -73,6 +73,10 @@
             {
               "replace": "apps/black-dashboard/src/environments/environment.ts",
               "with": "apps/black-dashboard/src/environments/environment.prod.ts"
+            },
+            {
+              "replace": "apps/black-dashboard/src/config/app-config.ts",
+              "with": "apps/black-dashboard/src/config/app-config.prod.ts"
             }
           ],
           "outputHashing": "all"

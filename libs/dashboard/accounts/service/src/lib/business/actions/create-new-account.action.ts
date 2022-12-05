@@ -56,25 +56,25 @@ export class CreateNewAccountAction<T> extends BusinessActionBase<T> {
       Severity.Information,
       `Preparing to call API to complete action.`
     );
-    //this.response = this.businessProvider.apiService.doSomething<T>(someInput);
+    this.response = this.businessProvider.apiService.createAccount<T>(this.newAccount);
 
     // FIXME: WIRE-UP TO REAL API WHEN AVAILABLE; RETURN MOCK
-    const newAccountResponse: accountInfo.NewAccountResponse = {
-      accountId: Guid.create().toString(),
-      emailAddress: this.newAccount.emailAddress,
-      userId: Guid.create().toString(),
-    }
+    // const newAccountResponse: accountInfo.NewAccountResponse = {
+    //   accountId: Guid.create().toString(),
+    //   emailAddress: this.newAccount.emailAddress,
+    //   userId: Guid.create().toString(),
+    // }
 
-    const apiResponse: ApiResponse<accountInfo.NewAccountResponse> = {
-      id: Guid.create().toString(),
-      isSuccess: true,
-      message: `Successfully created new account for ${this.newAccount.emailAddress}`,
-      messages: [],
-      timestamp: new Date(),
-      data: newAccountResponse
-    }
+    // const apiResponse: ApiResponse<accountInfo.NewAccountResponse> = {
+    //   id: Guid.create().toString(),
+    //   isSuccess: true,
+    //   message: `Successfully created new account for ${this.newAccount.emailAddress}`,
+    //   messages: [],
+    //   timestamp: new Date(),
+    //   data: newAccountResponse
+    // }
 
-    // return an Observable...
-    this.response = of(apiResponse);
+    // // return an Observable...
+    // this.response = of(apiResponse);
   }
 }
